@@ -1,0 +1,62 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Produção / Builds
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Testes e Cobertura
+coverage/
+*.lcov
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Variáveis de ambiente e segredos
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# Editores e IDEs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Arquivos temporários
+*.tmp
+*.bak
+temp/
+tmp/
+
+# Spec Kit / Specify (estado local da máquina)
+.specify/feature.json
+.specify/extensions/*/local-config.yml
