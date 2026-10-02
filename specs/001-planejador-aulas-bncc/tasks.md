@@ -75,23 +75,23 @@ Este documento decompõe o plano de implementação em tarefas acionáveis e ord
 ### Tarefas da Fase B
 
 #### Cliente HTTP n8n e Modo Mock Local
-- [ ] T018 [P] [US3] Definir esquemas Zod para validação do payload de envio ao n8n e validação estrita da resposta (`success: true`, `sessao: string`, `habilidade: string`, `answer: string`, `format: "markdown"`) em `apps/api/src/modules/n8n/n8n.schema.ts`
-- [ ] T019 [US3] Implementar `N8nClient` com cabeçalhos `x-api-key` e `x-request-id`, cancelamento por timeout de 60 segundos via `AbortController` e proibição de retry automático em `apps/api/src/modules/n8n/n8n.client.ts`
-- [ ] T020 [P] [US3] Implementar serviço de mock local para n8n ativado via `N8N_MOCK_MODE=true`, fornecendo resposta pedagógica estruturada em Markdown ou simulando falhas sob demanda com as tags `[SIMULAR_ERRO]` e `[SIMULAR_TIMEOUT]` em `apps/api/src/modules/n8n/n8n-mock.service.ts`
+- [x] T018 [P] [US3] Definir esquemas Zod para validação do payload de envio ao n8n e validação estrita da resposta (`success: true`, `sessao: string`, `habilidade: string`, `answer: string`, `format: "markdown"`) em `apps/api/src/modules/n8n/n8n.schema.ts`
+- [x] T019 [US3] Implementar `N8nClient` com cabeçalhos `x-api-key` e `x-request-id`, cancelamento por timeout de 60 segundos via `AbortController` e proibição de retry automático em `apps/api/src/modules/n8n/n8n.client.ts`
+- [x] T020 [P] [US3] Implementar serviço de mock local para n8n ativado via `N8N_MOCK_MODE=true`, fornecendo resposta pedagógica estruturada em Markdown ou simulando falhas sob demanda com as tags `[SIMULAR_ERRO]` e `[SIMULAR_TIMEOUT]` em `apps/api/src/modules/n8n/n8n-mock.service.ts`
 
 #### Ciclo Atômico de Geração e Entidade AiRun (US3 - Backend)
-- [ ] T021 [P] [US3] Implementar DTO de geração de planos com validações de `class-validator`: `skillIds` (array com 1 a 5 IDs válidos), `duration` (inteiro entre 15 e 360), `digitalResources` (booleano) e `pedagogicalInstruction` (texto de 10 a 1.000 caracteres) em `apps/api/src/modules/plans/dto/generate-plan.dto.ts`
-- [ ] T022 [US3] Implementar serviço de geração atômica de planos gerenciando o ciclo de vida de `AiRun`: registrar `PENDING`, invocar `N8nClient`, executar `prisma.$transaction` em caso de sucesso criando `Plan` (`RASCUNHO`, `isAiAssisted: true`) e atualizando `AiRun` para `SUCCEEDED`; em caso de erro, atualizar `AiRun` para `FAILED` sem persistir nenhum plano parcial em `apps/api/src/modules/plans/plans-generation.service.ts`
+- [x] T021 [P] [US3] Implementar DTO de geração de planos com validações de `class-validator`: `skillIds` (array com 1 a 5 IDs válidos), `duration` (inteiro entre 15 e 360), `digitalResources` (booleano) e `pedagogicalInstruction` (texto de 10 a 1.000 caracteres) em `apps/api/src/modules/plans/dto/generate-plan.dto.ts`
+- [x] T022 [US3] Implementar serviço de geração atômica de planos gerenciando o ciclo de vida de `AiRun`: registrar `PENDING`, invocar `N8nClient`, executar `prisma.$transaction` em caso de sucesso criando `Plan` (`RASCUNHO`, `isAiAssisted: true`) e atualizando `AiRun` para `SUCCEEDED`; em caso de erro, atualizar `AiRun` para `FAILED` sem persistir nenhum plano parcial em `apps/api/src/modules/plans/plans-generation.service.ts`
 
 #### Gestão, Edição e Privacidade de Planos (US4 & US5 - Backend)
-- [ ] T023 [P] [US4] Implementar DTO de atualização de planos com validação de `contentMarkdown` (mínimo de 10 caracteres) e `title` opcional em `apps/api/src/modules/plans/dto/update-plan.dto.ts`
-- [ ] T024 [US5] Implementar `PlansService` com isolamento estrito por `userId`: listar rascunhos do docente logado, obter plano por ID, salvar alterações de Markdown e excluir plano, disparando `NotFoundException` (HTTP 404) para planos inexistentes ou pertencentes a outro professor em `apps/api/src/modules/plans/plans.service.ts`
-- [ ] T025 [US3, US4, US5] Implementar `PlansController` expondo `GET /api/plans`, `GET /api/plans/:id`, `POST /api/plans/generate`, `PUT /api/plans/:id` e `DELETE /api/plans/:id`, protegidos por `JwtAuthGuard` em `apps/api/src/modules/plans/plans.controller.ts`
+- [x] T023 [P] [US4] Implementar DTO de atualização de planos com validação de `contentMarkdown` (mínimo de 10 caracteres) e `title` opcional em `apps/api/src/modules/plans/dto/update-plan.dto.ts`
+- [x] T024 [US5] Implementar `PlansService` com isolamento estrito por `userId`: listar rascunhos do docente logado, obter plano por ID, salvar alterações de Markdown e excluir plano, disparando `NotFoundException` (HTTP 404) para planos inexistentes ou pertencentes a outro professor em `apps/api/src/modules/plans/plans.service.ts`
+- [x] T025 [US3, US4, US5] Implementar `PlansController` expondo `GET /api/plans`, `GET /api/plans/:id`, `POST /api/plans/generate`, `PUT /api/plans/:id` e `DELETE /api/plans/:id`, protegidos por `JwtAuthGuard` em `apps/api/src/modules/plans/plans.controller.ts`
 
 #### Testes Críticos da Fase B
-- [ ] T026 [P] [US3] Criar testes unitários para o `N8nClient` validando schema Zod, injeção de headers `x-api-key`/`x-request-id`, interrupção por timeout de 60s e modo mock em `apps/api/src/modules/n8n/n8n.client.spec.ts`
-- [ ] T027 [P] [US3] Criar testes de integração E2E para o ciclo de geração com IA: validar criação atômica em sucesso e validar que falha com `[SIMULAR_ERRO]` marca `AiRun` como `FAILED` e mantém ZERO planos parciais no banco em `apps/api/test/plans-generation.e2e-spec.ts`
-- [ ] T028 [P] [US5] Criar testes de integração E2E de multitenancy e prevenção a IDOR: validar que requisições do Prof. Marcos para planos da Profª Ana retornam estritamente HTTP 404 em `apps/api/test/plans-privacy.e2e-spec.ts`
+- [x] T026 [P] [US3] Criar testes unitários para o `N8nClient` validando schema Zod, injeção de headers `x-api-key`/`x-request-id`, interrupção por timeout de 60s e modo mock em `apps/api/src/modules/n8n/n8n.client.spec.ts`
+- [x] T027 [P] [US3] Criar testes de integração E2E para o ciclo de geração com IA: validar criação atômica em sucesso e validar que falha com `[SIMULAR_ERRO]` marca `AiRun` como `FAILED` e mantém ZERO planos parciais no banco em `apps/api/test/plans-generation.e2e-spec.ts`
+- [x] T028 [P] [US5] Criar testes de integração E2E de multitenancy e prevenção a IDOR: validar que requisições do Prof. Marcos para planos da Profª Ana retornam estritamente HTTP 404 em `apps/api/test/plans-privacy.e2e-spec.ts`
 
 ---
 
