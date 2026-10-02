@@ -33,31 +33,31 @@ Este documento decompõe o plano de implementação em tarefas acionáveis e ord
 ### Tarefas da Fase A
 
 #### Monorepo, Ambiente e Scripts Raiz
-- [ ] T001 Configurar workspace do monorepo e scripts raiz (`dev`, `lint`, `typecheck`, `test`, `test:integration`, `build`) em `pnpm-workspace.yaml` e `package.json`
-- [ ] T002 [P] Configurar regras e aliases compartilhados de TypeScript em `tsconfig.base.json`
-- [ ] T003 [P] Configurar serviço de banco de dados PostgreSQL 16 com volume persistente em `docker-compose.yml`
-- [ ] T004 [P] Criar templates de variáveis de ambiente com parâmetros locais em `apps/api/.env.example` e `apps/web/.env.example`
+- [X] T001 Configurar workspace do monorepo e scripts raiz (`dev`, `lint`, `typecheck`, `test`, `test:integration`, `build`) em `pnpm-workspace.yaml` e `package.json`
+- [X] T002 [P] Configurar regras e aliases compartilhados de TypeScript em `tsconfig.base.json`
+- [X] T003 [P] Configurar serviço de banco de dados PostgreSQL 16 com volume persistente em `docker-compose.yml`
+- [X] T004 [P] Criar templates de variáveis de ambiente com parâmetros locais em `apps/api/.env.example` e `apps/web/.env.example`
 
 #### Banco de Dados, Prisma e Seed Idempotente
-- [ ] T005 Inicializar aplicação NestJS 11 com TypeScript e dependências de segurança em `apps/api/package.json` e `apps/api/tsconfig.json`
-- [ ] T006 Definir esquema relacional completo do Prisma com modelos `User`, `RefreshToken`, `BnccSkill`, `Plan`, `PlanSkill`, `AiRun` e enums `PlanStatus` (`RASCUNHO`) e `AiRunStatus` (`PENDING`, `SUCCEEDED`, `FAILED`) em `apps/api/prisma/schema.prisma`
-- [ ] T007 Implementar script de seed idempotente (`upsert`) populando o catálogo BNCC a partir de `docs/data/bncc-recorte.json` e as contas demo `ana@demo.bncc.br` (com 4 planos) e `marcos@demo.bncc.br` (com 0 planos) em `apps/api/prisma/seed.ts`
+- [X] T005 Inicializar aplicação NestJS 11 com TypeScript e dependências de segurança em `apps/api/package.json` e `apps/api/tsconfig.json`
+- [X] T006 Definir esquema relacional completo do Prisma com modelos `User`, `RefreshToken`, `BnccSkill`, `Plan`, `PlanSkill`, `AiRun` e enums `PlanStatus` (`RASCUNHO`) e `AiRunStatus` (`PENDING`, `SUCCEEDED`, `FAILED`) em `apps/api/prisma/schema.prisma`
+- [X] T007 Implementar script de seed idempotente (`upsert`) populando o catálogo BNCC a partir de `docs/data/bncc-recorte.json` e as contas demo `ana@demo.bncc.br` (com 4 planos) e `marcos@demo.bncc.br` (com 0 planos) em `apps/api/prisma/seed.ts`
 
 #### Autenticação, Sessão e Fronteira de Dados (US1 - Backend)
-- [ ] T008 [P] [US1] Implementar serviço de hash e validação de senhas com bcrypt em `apps/api/src/modules/auth/password.service.ts`
-- [ ] T009 [P] [US1] Implementar serviço de gestão de Refresh Tokens persistindo apenas hash criptográfico SHA-256 e data de expiração de 8h em `apps/api/src/modules/auth/refresh-token.service.ts`
-- [ ] T010 [US1] Implementar estratégia Passport JWT para validação de Access Token em memória e guardas de proteção de rota em `apps/api/src/modules/auth/jwt.strategy.ts` e `apps/api/src/modules/auth/jwt-auth.guard.ts`
-- [ ] T011 [US1] Implementar `AuthService` e `AuthController` com endpoints `/api/auth/login`, `/api/auth/refresh`, `/api/auth/logout` e `/api/auth/me`, configurando cookie `HttpOnly; Path=/api/auth; SameSite=Strict; [Secure condicional]` em `apps/api/src/modules/auth/auth.service.ts` e `apps/api/src/modules/auth/auth.controller.ts`
-- [ ] T012 Configurar bootstrap do NestJS com prefixo `/api`, CORS restrito a `http://localhost:3000` com `credentials: true`, cookie-parser e validação global de DTOs via `ValidationPipe` em `apps/api/src/main.ts`
+- [X] T008 [P] [US1] Implementar serviço de hash e validação de senhas com bcrypt em `apps/api/src/modules/auth/password.service.ts`
+- [X] T009 [P] [US1] Implementar serviço de gestão de Refresh Tokens persistindo apenas hash criptográfico SHA-256 e data de expiração de 8h em `apps/api/src/modules/auth/refresh-token.service.ts`
+- [X] T010 [US1] Implementar estratégia Passport JWT para validação de Access Token em memória e guardas de proteção de rota em `apps/api/src/modules/auth/jwt.strategy.ts` e `apps/api/src/modules/auth/jwt-auth.guard.ts`
+- [X] T011 [US1] Implementar `AuthService` e `AuthController` com endpoints `/api/auth/login`, `/api/auth/refresh`, `/api/auth/logout` e `/api/auth/me`, configurando cookie `HttpOnly; Path=/api/auth; SameSite=Strict; [Secure condicional]` em `apps/api/src/modules/auth/auth.service.ts` e `apps/api/src/modules/auth/auth.controller.ts`
+- [X] T012 Configurar bootstrap do NestJS com prefixo `/api`, CORS restrito a `http://localhost:3000` com `credentials: true`, cookie-parser e validação global de DTOs via `ValidationPipe` em `apps/api/src/main.ts`
 
 #### Catálogo Curricular BNCC (US2 - Backend)
-- [ ] T013 [P] [US2] Implementar `BnccService` com consultas otimizadas e filtros compostos por nível, ano escolar, eixo e busca textual por código/descrição em `apps/api/src/modules/bncc/bncc.service.ts`
-- [ ] T014 [US2] Implementar `BnccController` expondo `GET /api/bncc/skills` protegido por `JwtAuthGuard` em `apps/api/src/modules/bncc/bncc.controller.ts`
+- [X] T013 [P] [US2] Implementar `BnccService` com consultas otimizadas e filtros compostos por nível, ano escolar, eixo e busca textual por código/descrição em `apps/api/src/modules/bncc/bncc.service.ts`
+- [X] T014 [US2] Implementar `BnccController` expondo `GET /api/bncc/skills` protegido por `JwtAuthGuard` em `apps/api/src/modules/bncc/bncc.controller.ts`
 
 #### Testes Críticos da Fase A
-- [ ] T015 [P] [US1] Criar testes unitários para o serviço de autenticação, hashing de senhas e rotação de refresh token em `apps/api/src/modules/auth/auth.service.spec.ts`
-- [ ] T016 [P] [US1] Criar testes de integração E2E para o fluxo completo de autenticação (login válido, login com credenciais inválidas retornando 401, rotação de refresh token no cookie e logout) em `apps/api/test/auth.e2e-spec.ts`
-- [ ] T017 [P] [US2] Criar testes de integração E2E para consulta ao catálogo BNCC, validando filtros por ano, eixo e busca textual `q` em `apps/api/test/bncc.e2e-spec.ts`
+- [X] T015 [P] [US1] Criar testes unitários para o serviço de autenticação, hashing de senhas e rotação de refresh token em `apps/api/src/modules/auth/auth.service.spec.ts`
+- [X] T016 [P] [US1] Criar testes de integração E2E para o fluxo completo de autenticação (login válido, login com credenciais inválidas retornando 401, rotação de refresh token no cookie e logout) em `apps/api/test/auth.e2e-spec.ts`
+- [X] T017 [P] [US2] Criar testes de integração E2E para consulta ao catálogo BNCC, validando filtros por ano, eixo e busca textual `q` em `apps/api/test/bncc.e2e-spec.ts`
 
 ---
 
