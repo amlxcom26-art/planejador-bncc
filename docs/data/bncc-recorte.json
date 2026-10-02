@@ -1,0 +1,47 @@
+[
+  {
+    "nivel": "Ensino Fundamental",
+    "ano": 1,
+    "eixo": "Pensamento Computacional (PC)",
+    "codigo": "EF01CO01",
+    "descricao": "Organizar objetos físicos ou digitais considerando diferentes características para esta organização, explicitando semelhanças (padrões) e diferenças.",
+    "explicacao": "Objetos de um mesmo conjunto podem ser organizados e agrupados de diferentes maneiras, enfatizando as características desejadas. A organização adequada pode facilitar a busca por um objeto específico dentro deste conjunto.",
+    "exemplos": "O professor pode pedir que os alunos organizem um conjunto de personagens por gênero, cor dos olhos, idade, tamanho, nacionalidade etc. Também pode sugerir que os alunos organizem um conjunto de figuras geométricas por cor, por tipo de figura, por tamanho das figuras etc.\n\nIntroduzir os estudantes no tema, por meio de imagens que representem o termo digital\nMaterial complementar: [1º ano_Apresentação](https://docs.google.com/document/d/1wahaDvHrn_G4cGtipXP5iF2sWyT7TOdWL86Zzd9ZBaQ/edit?usp=sharing)\n\nA partir das semelhanças e diferenças dos tipos de curvas, treinar a motricidade fina para, posteriormente, o aluno não ter dificuldades ao trabalhar com o touchpad.\nMaterial complementar: [1º_Curvas e linhas](https://docs.google.com/document/d/1DQyzNQZdlKYUpuT6xtHfb3XMteCEkvDz0m7W21Qrx54/edit?usp=sharing)    [1º_Curvas jogo](https://docs.google.com/document/d/10BqifGxt3rX0VRBR0CxV6g6hGIO4pohCTwqVkOJFBLM/edit?usp=sharing)\n\nClassificar os objetos de acordo com suas características.\nMaterial complementar: [1º_organização](https://docs.google.com/document/d/1WNRoIV_FjETpaqMp4LuDTWqGf-glWyTftUHTUbJH7xw/edit?usp=sharing)    [1º_Contagem e quant.](https://docs.google.com/document/d/14_6wGKcamKI-kgaXBH8319zh6qaDEeFYV1K8ofjCqFA/edit?usp=sharing)    [1º_Classificação](https://docs.google.com/document/d/1zEWTkCAwgbuU7o4wlSfIyDVkmZBvr_BkGECyJlVkVnM/edit?usp=sharing)\n\nAproximar o estudante do conceito de padrões, por meio de atividades que representem sequências de padrões.\nMaterial complementar: [1º_Padrões](https://docs.google.com/document/d/17N9hJiDtcphj3OIOUAgLkIla8i_kIaMaQMWxXo2b0Ac/edit?usp=sharing)    [1º_Padrão robô1](https://docs.google.com/document/d/139ICJGWNQd7Vj-YTbWrqXf39VXTrlEK4Z4UtkG-zzm4/edit?usp=sharing)    [1º_Padrão robô2](https://docs.google.com/document/d/1duLUYT7zFcHeFzl0xZ4JU0xBobQyzyS_wsZZlBdwOsc/edit?usp=sharing)    [1º_Confecção robô](https://docs.google.com/document/d/1cevIGwj4A6nXkleSHKk0A9BB4TQ760dhLoFXhFiCiVY/edit?usp=sharing)"
+  },
+  {
+    "nivel": "Ensino Fundamental",
+    "ano": 1,
+    "eixo": "Pensamento Computacional (PC)",
+    "codigo": "EF01CO02",
+    "descricao": "Identificar e seguir sequências de passos aplicados no dia a dia para resolver problemas.",
+    "explicacao": "O objetivo é que os alunos possam identificar passos que fazem parte da execução de uma tarefa, bem como seguir uma sequência de passos para realizar uma tarefa (resolver um problema).",
+    "exemplos": "O professor pode fornecer sequências de passos para resolver problemas como construir origamis simples, seguir caminhos, executar uma receita, construir figuras com Tangram, entre outros, e solicitar que os alunos as executem.\n\nIntroduzir o conceito de algoritmo.\nMaterial complementar: [1º_Algoritmo1](https://docs.google.com/document/d/1rxNpo6IZmR-KUev124sCGeHaah3aVGMKrvEIU7dXeFE/edit?usp=sharing)\n\nA partir do conhecimento adquirido sobre algoritmos, criar um novo algoritmo e, depois, recolocar o algoritmo em sua ordem original.\nMaterial complementar: [1º_Algoritmo COJP](https://docs.google.com/document/d/1clery4CLehwWIcLutxZKPBEgEJEtNXK5Jukq1GGZhcs/edit?usp=sharing)"
+  },
+  {
+    "nivel": "Ensino Fundamental",
+    "ano": 2,
+    "eixo": "Pensamento Computacional (PC)",
+    "codigo": "EF02CO02",
+    "descricao": "Criar e simular algoritmos representados em linguagem oral, escrita ou pictográfica, construídos como sequências com repetições simples (iterações definidas) com base em instruções preestabelecidas ou criadas, analisando como a precisão da instrução impacta na execução do algoritmo.",
+    "explicacao": "Usar linguagem oral, textual ou pictográfica para descrever algoritmos, percebendo a importância de descrevê-los com precisão para que possam ser executados por outras pessoas (ou máquinas). Os algoritmos aqui devem ser descritos através de sequências de instruções (preestabelecidas ou criadas pelos alunos) que podem ser repetidas um determinado número de vezes. Os ciclos de repetição devem ser simples, isto é, não devem conter outros ciclos.",
+    "exemplos": "Os alunos podem construir algoritmos com conjuntos de instruções pré-definidas, como ações para avançar, virar à direita, virar à esquerda, bem como definir seus próprios conjuntos de instruções. Para descrever a tarefa de andar 10 passos, virar a esquerda e andar mais 5 passos, pode-se definir o seguinte algoritmo: 'Ande um passo 10 vezes; vire à esquerda; e ande um passo 5 vezes'\n\nIntroduzir no estudante o conceito de algoritmo, ou seja, ele precisa ser capaz de entender que uma sequência de instruções para fazer determinada tarefa se chama algoritmo.\nMaterial complementar: [Introdução algortimo](https://docs.google.com/document/d/1C_cGLkasLlzzrj4kfGmvkAi9zPQJ4DDfc9CGFtpHqAc/edit?usp=sharing)\n\nIntroduzir a noção de algoritmo e escrever um algoritmo simples.\nMaterial complementar: [Dentes bem limpos](https://docs.google.com/document/d/1HnkT-Zif2ytPq_Tck4o6nhQ17Yw3ik1Ns7ZnV4Mx_xE/edit?usp=sharing)\n\nUsar a linguagem oral para construir um algoritmo, e mostrar que, há algoritmos que podem mudar a ordem das instruções e ainda assim, obter o mesmo resultado.\nMaterial complementar: [Achocolatado](https://docs.google.com/document/d/1o6UftOjLH2bgcc6f2RusXlTl6zm8P_KpemMCJiZCMOg/edit?usp=sharing)\n\nEscrever algoritmos utilizando um conjunto de instruções definidas previamente e expressar algoritmos usando uma linguagem simbólica.\nMaterial complementar: [Começamos programar](https://docs.google.com/document/d/14aMqZXVPfBUgyhCyJXvcNZRRo1ROYHFrwFHUwTDKR9A/edit?usp=sharing)"
+  },
+  {
+    "nivel": "Ensino Fundamental",
+    "ano": 2,
+    "eixo": "Mundo Digital (MD)",
+    "codigo": "EF02CO04",
+    "descricao": "Diferenciar componentes físicos (hardware) e programas que fornecem as instruções (software) para o hardware.",
+    "explicacao": "O objetivo da habilidade é mostrar aos alunos que em seu cotidiano existem dispositivos físicos (celulares, computadores, calculadoras, máquinas de costura etc.) que são controlados por algo que segue uma sequência de passos lógicos (um App do celular, uma pessoa com a calculadora, uma costureira) etc.",
+    "exemplos": "Pode-se utilizar dispositivos do cotidiano do aluno para diferenciar o dispositivo físico (hardware) daquilo que o controla (software).\n\nPor meio de atividades plugadas e desplugadas, diferenciar hardware de software.\nMaterial complementar: [Hardware e Software](https://docs.google.com/document/d/1r5VCbMmgbC5pwTdSDbtuItn6W7nwawT5n1Gr0cUqzQ0/edit?usp=sharing)    [Jogo partes computad](https://docs.google.com/document/d/1AuOIn45Yc-oRbsGg24VpR5yMHzEirzCtQEz1l5ZL1MM/edit?usp=sharing)\n\nPor meio de atividades online, identificar softwares que são aplicativos\nMaterial complementar: [Software para colori](https://docs.google.com/document/d/1wsk3vnFizOF308Ic8Uvv4NhFS0ZkFNUZnPERGEXdXKg/edit?usp=sharing)    [Jogos GCompris](https://docs.google.com/document/d/1hZPLgigAgPhPsA-lsoXOfpOwS_OnY07tJS3Bdml9M2k/edit?usp=sharing)"
+  },
+  {
+    "nivel": "Ensino Fundamental",
+    "ano": 2,
+    "eixo": "Cultura Digital (CD)",
+    "codigo": "EF02CO06",
+    "descricao": "Reconhecer os cuidados com a segurança no uso de dispositivos computacionais.",
+    "explicacao": "Nesta habilidade temos a perspectiva de trazer um panorama sobre os cuidados com a segurança ao usar dispositivos como celular, tablets, computadores dentre outros (roubo de dados em dispositivos físicos, rastro de dados online quando da utilização de jogos por exemplo etc.).",
+    "exemplos": "O professor poderá criar um portfólio com alguns cuidados ao jogar nos dispositivos como celular, tablets.\n\nRefletir que não podemos falar sobre tudo que quisermos na internet, através de atividades sobre perfis.\nMaterial complementar: [Nossos perfis](https://docs.google.com/document/d/1j7cgFyMrPSltwMTh3Dw_dREPianzqKhc7U8bHIRDuHI/edit?usp=sharing)\n\nCompreender que a privacidade no uso da internet é muito importante para a segurança.\nMaterial complementar: [Jogo da privacidade](https://docs.google.com/document/d/1apJTsSoGjm7El1kNg8l3zCtiqY3B1JsaRBG-RDdhYhQ/edit?usp=sharing)    [Proteja privacidade](https://docs.google.com/document/d/1UmPsspPmq41cLaZ1w_aYNo9LGmk4fDoZGV_bpxFWJM4/edit?usp=sharing)"
+  }
+]
